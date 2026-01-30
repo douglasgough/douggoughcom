@@ -1,4 +1,87 @@
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
-@source "../views";
-@source "../../content";
+
+/* 1) Single source of truth: swap fonts here */
+:root {
+    --font-body: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji",
+    "Segoe UI Emoji";
+
+    --font-heading: "Lora", ui-serif, Georgia, Cambria, "Times New Roman", Times,
+    serif;
+}
+
+/* 2) Optional: define theme tokens so you can use `font-body` / `font-heading` utilities */
+@theme {
+    --font-family-body: var(--font-body);
+    --font-family-heading: var(--font-heading);
+}
+
+/* 3) Base typography defaults */
+@layer base {
+    html {
+        /* consistent text rendering across platforms */
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+        font-family: var(--font-body);
+        background-color: oklch(96.3% 0.004 106.424); /* stone-100 */
+    }
+
+    h1, h2, h3, h4 {
+        font-family: var(--font-heading);
+        /* restrained "editorial" feel */
+        letter-spacing: -0.01em;
+    }
+
+    h1 {
+        /* Better vertical spacing when wrapping */
+        line-height: 1.2;
+    }
+
+    /* Automatic zebra striping for all sections */
+    /* Even-numbered sections (2, 4, 6...) get emerald background */
+    main > section:nth-of-type(even) {
+        background-color: color-mix(in srgb, oklch(97.9% 0.021 166.113) 40%, transparent);
+    }
+
+    /* Odd-numbered sections EXCEPT the first (3, 5, 7...) are transparent (shows body slate-50) */
+    main > section:nth-of-type(odd):not(:first-of-type) {
+        background-color: transparent;
+    }
+}
+
+/* 4) Utilities you can use anywhere */
+@layer utilities {
+    .font-body {
+        font-family: var(--font-body);
+    }
+
+    .font-heading {
+        font-family: var(--font-heading);
+    }
+
+    /* Override Tailwind text utilities to have better line-height for headings */
+    .text-4xl {
+        line-height: 1.2 !important;
+    }
+
+    .text-5xl {
+        line-height: 1.2 !important;
+    }
+
+    /* Hero gradient background - single source of truth */
+    .hero-gradient {
+        background: linear-gradient(to bottom in oklab,
+            oklch(97.9% 0.021 166.113),
+            transparent
+        );
+    }
+}
+
+/* 5) Alpine.js cloak - hide elements until Alpine loads */
+[x-cloak] {
+    display: none !important;
+}

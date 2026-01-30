@@ -1,7 +1,7 @@
 ---
 title: Home
 id: home
-template: home
+template: pages/home
 blueprint: pages
 ---
 ## Welcome to your brand new Statamic site!

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title ?? 'DougGough.com — Church Website Support' }}</title>
+
+  <!-- Fonts: Inter (body) + Lora (headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Compiled Tailwind CSS with custom configuration -->
+  {{ vite src="resources/css/site.css" }}
+
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body class="bg-white text-slate-900 font-body">
+  <!-- Skip link -->
+  <a href="#main"
+     class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-50 focus:rounded-lg focus:bg-white focus:px-3 focus:py-2 focus:ring-2 focus:ring-emerald-700">
+    Skip to content
+  </a>
+
+  {{ partial:header }}
+
+  <main id="main">
+    {{ template_content }}
+  </main>
+
+  {{ partial:footer }}
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
