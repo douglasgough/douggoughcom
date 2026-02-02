@@ -6,8 +6,9 @@ This directory contains the Antlers-based view structure for the Statamic/Larave
 
 ```
 resources/views/
+├── layout.antlers.html            # Main layout with <head>, header, footer includes
 ├── layouts/
-│   └── base.antlers.html          # Base layout with <head>, header, footer includes
+│   └── base.antlers.html          # Legacy layout (no longer in use)
 ├── partials/
 │   ├── header.antlers.html        # Site header navigation
 │   └── footer.antlers.html        # Site footer
@@ -24,15 +25,16 @@ resources/views/
 
 ## How It Works
 
-### Base Layout
-The `layouts/base.antlers.html` file contains:
+### Main Layout
+The `layout.antlers.html` file contains:
 - Document structure (html, head, body)
-- Meta tags and fonts
-- CSS includes (points to `/dist/app.css`)
+- Meta tags and fonts (Inter and Lora)
+- Vite asset includes for CSS and JS
+- Google Analytics tracking
+- Skip to content accessibility link
 - Header partial include: `{{ partial:header }}`
 - Footer partial include: `{{ partial:footer }}`
 - Template content slot: `{{ template_content }}`
-- Scripts (site-header.js and year script)
 
 ### Page Templates
 Each page template in `pages/` includes:
@@ -52,7 +54,7 @@ In your Statamic routes or collection configuration, you'll reference these temp
 ```yaml
 # Example in a collection or route
 template: pages/home
-layout: layouts/base
+layout: layout
 ```
 
 ### Page Title Variable
@@ -63,17 +65,17 @@ title: "Contact | Doug Gough"
 ---
 ```
 
-The base layout renders it as:
+The main layout renders it as:
 ```antlers
 <title>{{ title ?? 'DougGough.com — Church Website Support' }}</title>
 ```
 
-## Static Assets
-The templates reference:
-- `/dist/app.css` - Compiled Tailwind CSS
-- `/site-header.js` - Header navigation script (from static site)
+## Assets
+The templates use Vite for asset bundling:
+- `resources/css/site.css` - Tailwind CSS
+- `resources/js/site.js` - Alpine.js and site JavaScript
 
-These paths assume the static assets remain in the root directory alongside the Antlers templates.
+The layout also includes Google Analytics tracking with anonymized IP.
 
 ## Forms
 Forms in the templates currently have `action="#"` and are non-functional mockups. To make them work:

@@ -2,5 +2,5 @@ title: Pages
 structure:
   root: true
 route: '{parent_uri}/{slug}'
-layout: layouts/base
+layout: layout
 propagate: true
