@@ -1,0 +1,64 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              type: text
+              display: Name
+              validate:
+                - required
+              input_type: text
+              autocomplete: name
+          -
+            handle: email
+            field:
+              type: text
+              display: Email
+              validate:
+                - required
+                - email
+              input_type: email
+              autocomplete: email
+          -
+            handle: org
+            field:
+              type: text
+              display: 'Church / Organization'
+              instructions: Optional
+              input_type: text
+              autocomplete: organization
+          -
+            handle: url
+            field:
+              type: text
+              display: 'Website URL'
+              instructions: Optional
+              input_type: url
+              placeholder: 'https://'
+          -
+            handle: priority
+            field:
+              type: select
+              display: Priority
+              validate:
+                - required
+              options:
+                something_broken: 'Something is broken'
+                ongoing_maintenance: 'Ongoing maintenance and support'
+                improvements: 'Improvements / next steps'
+                new_build: 'New build (in an existing relationship)'
+                not_sure: 'Not sure yet'
+              default: something_broken
+          -
+            handle: message
+            field:
+              type: textarea
+              display: Message
+              validate:
+                - required
+              rows: 6
+              instructions: 'Please don''t include passwords in this form.'
