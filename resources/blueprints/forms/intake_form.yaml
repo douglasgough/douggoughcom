@@ -54,7 +54,7 @@ tabs:
                 not_sure: 'Not sure yet'
               default: something_broken
           -
-            handle: message
+            handle: inquiry
             field:
               type: textarea
               display: Message
