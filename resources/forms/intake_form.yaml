@@ -3,5 +3,7 @@ email:
   -
     id: ml5h75cc
     to: 'hello@douggough.com, douglas@douggough.com'
-    html: default
-    text: default
+    reply_to: '{{ email }}'
+    subject: 'New Contact: {{ name }} - {{ priority }}'
+    html: email.intake_form
+    text: false
