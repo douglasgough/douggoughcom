@@ -1,11 +1,52 @@
 <footer class="border-t border-slate-300 bg-white">
-  <div class="mx-auto max-w-6xl px-5 py-10 text-sm text-slate-800 sm:px-6">
-    <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-      <div>© <span id="year"></span> Doug Gough</div>
-      <div class="flex gap-5">
-        <a class="hover:text-slate-900" href="#stewardship">How I Work</a>
-        <a class="hover:text-slate-900" href="#contact">Contact</a>
+  <div class="mx-auto max-w-6xl px-5 py-12 text-slate-800 sm:px-6">
+    <div class="grid gap-10 sm:grid-cols-3">
+      <!-- Column 1: Branding -->
+      <div>
+        <div class="text-base font-semibold leading-tight text-slate-900">
+          {{ brand:site_name }}
+        </div>
+        <div class="mt-1 text-sm leading-relaxed text-slate-600">
+          {{ brand:site_subtitle }}
+        </div>
+        <div class="mt-4 text-xs leading-relaxed text-slate-500">
+          © {{ now format="Y" }} Doug Gough. All rights reserved.
+        </div>
       </div>
+
+      <!-- Column 2: Primary pages (footer_nav) -->
+      <nav aria-label="Footer">
+        <h2 class="text-sm font-semibold text-slate-900">Pages</h2>
+        <ul class="mt-4 space-y-2">
+          {{ nav:footer_nav }}
+            <li>
+              <a
+                href="{{ url }}"
+                class="inline-flex text-sm text-slate-700 hover:text-slate-900 focus:outline-none focus-visible:rounded focus-visible:ring-2 focus-visible:ring-slate-400"
+              >
+                {{ title }}
+              </a>
+            </li>
+          {{ /nav:footer_nav }}
+        </ul>
+      </nav>
+
+      <!-- Column 3: Landing pages (landing_pages) -->
+      <nav aria-label="Landing pages">
+        <h2 class="text-sm font-semibold text-slate-900">Resources</h2>
+        <ul class="mt-4 space-y-2">
+          {{ nav:landing_pages }}
+            <li>
+              <a
+                href="{{ url }}"
+                class="inline-flex text-sm text-slate-700 hover:text-slate-900 focus:outline-none focus-visible:rounded focus-visible:ring-2 focus-visible:ring-slate-400"
+              >
+                {{ title }}
+              </a>
+            </li>
+          {{ /nav:landing_pages }}
+        </ul>
+      </nav>
     </div>
   </div>
 </footer>
