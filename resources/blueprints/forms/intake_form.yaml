@@ -11,7 +11,6 @@ tabs:
               display: Name
               validate:
                 - required
-              input_type: text
               autocomplete: name
           -
             handle: email
@@ -29,7 +28,6 @@ tabs:
               type: text
               display: 'Church / Organization'
               instructions: Optional
-              input_type: text
               autocomplete: organization
           -
             handle: url
@@ -47,11 +45,21 @@ tabs:
               validate:
                 - required
               options:
-                something_broken: 'Something is broken'
-                ongoing_maintenance: 'Ongoing maintenance and support'
-                improvements: 'Improvements / next steps'
-                new_build: 'New build (in an existing relationship)'
-                not_sure: 'Not sure yet'
+                -
+                  key: something_broken
+                  value: 'Something is broken'
+                -
+                  key: ongoing_maintenance
+                  value: 'Ongoing maintenance and support'
+                -
+                  key: improvements
+                  value: 'Improvements / next steps'
+                -
+                  key: new_build
+                  value: 'New website build'
+                -
+                  key: not_sure
+                  value: 'Not sure yet'
               default: something_broken
           -
             handle: inquiry
@@ -61,4 +69,4 @@ tabs:
               validate:
                 - required
               rows: 6
-              instructions: 'Please don''t include passwords in this form.'
+              instructions: "Please don't include passwords in this form."
