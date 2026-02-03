@@ -11,6 +11,7 @@ tabs:
               display: Name
               validate:
                 - required
+                - 'min:2'
               autocomplete: name
           -
             handle: email
@@ -28,6 +29,8 @@ tabs:
               type: text
               display: 'Church / Organization'
               instructions: Optional
+              validate:
+                - 'min:2'
               autocomplete: organization
           -
             handle: url
@@ -35,6 +38,8 @@ tabs:
               type: text
               display: 'Website URL'
               instructions: Optional
+              validate:
+                - url
               input_type: url
               placeholder: 'https://'
           -
@@ -68,5 +73,6 @@ tabs:
               display: Message
               validate:
                 - required
+                - 'min:10'
               rows: 6
               instructions: "Please don't include passwords in this form."

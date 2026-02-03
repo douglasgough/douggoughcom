@@ -224,7 +224,6 @@ title: "Church WordPress Help & Support | Doug Gough"
           </p>
 
           {{ form:wordpress_support }}
-
             {{ if success }}
               <div class="rounded-xl border border-emerald-300 bg-emerald-50 p-4 text-sm text-emerald-900">
                 <strong>Thank you!</strong> Your WordPress support request has been received. I'll respond within 1 business day.
@@ -362,9 +361,6 @@ title: "Church WordPress Help & Support | Doug Gough"
                 Tip: If you saw an error message, paste it here.
               </p>
             </div>
-
-            <!-- Honeypot spam protection -->
-            <input type="text" name="{{ honeypot ?? 'honeypot' }}" class="hidden" tabindex="-1" autocomplete="off" />
 
             <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <button type="submit"

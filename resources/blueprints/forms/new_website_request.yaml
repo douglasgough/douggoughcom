@@ -11,6 +11,7 @@ tabs:
               display: Name
               validate:
                 - required
+                - 'min:2'
               autocomplete: name
           -
             handle: email
@@ -28,6 +29,8 @@ tabs:
               type: text
               display: 'Church / Organization'
               instructions: Optional
+              validate:
+                - 'min:2'
               autocomplete: organization
           -
             handle: website_url
@@ -35,6 +38,8 @@ tabs:
               type: text
               display: 'Current Website URL'
               instructions: 'Optional - if they have an existing site'
+              validate:
+                - url
               input_type: url
               placeholder: 'https://'
           -
@@ -122,6 +127,9 @@ tabs:
             field:
               type: textarea
               display: 'Tell me about your situation'
+              validate:
+                - required
+                - 'min:10'
               rows: 7
               instructions: "What's prompting the rebuild? What needs to change? Any deadlines or constraints? Please don't include passwords in this form."
           -

@@ -11,6 +11,7 @@ tabs:
               display: Name
               validate:
                 - required
+                - 'min:2'
               autocomplete: name
           -
             handle: email
@@ -28,6 +29,8 @@ tabs:
               type: text
               display: 'Church / Organization'
               instructions: Optional
+              validate:
+                - 'min:2'
               autocomplete: organization
           -
             handle: website_url
@@ -36,6 +39,7 @@ tabs:
               display: 'Website URL'
               validate:
                 - required
+                - url
               input_type: url
               placeholder: 'https://'
           -
@@ -136,6 +140,9 @@ tabs:
             field:
               type: textarea
               display: "What's going on?"
+              validate:
+                - required
+                - 'min:10'
               rows: 7
               instructions: "In a few sentences: what you're seeing, what changed recently (if anything), and what outcome you need. If you saw an error message, paste it here. Please don't include passwords in this form."
           -
