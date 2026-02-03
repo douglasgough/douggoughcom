@@ -14,6 +14,7 @@
         "laravel/framework": "^12.0",
         "laravel/nightwatch": "^1.22",
         "laravel/tinker": "^2.10.1",
+        "pecotamic/sitemap": "^1.4",
         "spatie/laravel-honeypot": "^4.6",
         "statamic/cms": "^6.0",
         "statamic/seo-pro": "^7.0"
