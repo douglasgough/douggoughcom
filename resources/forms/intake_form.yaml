@@ -7,3 +7,4 @@ email:
     subject: 'New Contact: {{ name }} - {{ priority }}'
     html: email.intake_form
     text: false
+    mailer: smtp

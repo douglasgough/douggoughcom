@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dcb2f4ac568ad3e15444d5abcb347c09",
+    "content-hash": "5054d3dc94cefae66519c8ea46d9a140",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -1558,6 +1558,63 @@
                 }
             ],
             "time": "2025-12-17T13:38:29+00:00"
+        },
+        {
+            "name": "isapp/statamic-honeypot",
+            "version": "6.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/isap-ou/statamic-honeypot.git",
+                "reference": "da2e0a116780f9b9852ce9281631db9d41b4c495"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/isap-ou/statamic-honeypot/zipball/da2e0a116780f9b9852ce9281631db9d41b4c495",
+                "reference": "da2e0a116780f9b9852ce9281631db9d41b4c495",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.2",
+                "spatie/laravel-honeypot": "^4",
+                "statamic/cms": "^6.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1",
+                "orchestra/testbench": "^10"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Isapp\\Honeypot\\ServiceProvider"
+                    ]
+                },
+                "statamic": {
+                    "name": "Honeypot Spam Protection",
+                    "description": "A lightweight, no-CAPTCHA spam protection module that silently blocks bots without disrupting real users."
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Isapp\\Honeypot\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Andrii Trush",
+                    "email": "andrii.trush@isapp.be"
+                }
+            ],
+            "description": "A lightweight, no-CAPTCHA spam protection module that silently blocks bots without disrupting real users.",
+            "support": {
+                "issues": "https://github.com/isap-ou/statamic-honeypot/issues",
+                "source": "https://github.com/isap-ou/statamic-honeypot"
+            },
+            "time": "2026-01-21T10:59:08+00:00"
         },
         {
             "name": "james-heinrich/getid3",
@@ -4970,6 +5027,143 @@
                 }
             ],
             "time": "2025-02-14T12:29:50+00:00"
+        },
+        {
+            "name": "spatie/laravel-honeypot",
+            "version": "4.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-honeypot.git",
+                "reference": "62ec9dbecd2a17a4e2af62b09675f89813295cac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-honeypot/zipball/62ec9dbecd2a17a4e2af62b09675f89813295cac",
+                "reference": "62ec9dbecd2a17a4e2af62b09675f89813295cac",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^11.0|^12.0",
+                "illuminate/encryption": "^11.0|^12.0",
+                "illuminate/http": "^11.0|^12.0",
+                "illuminate/support": "^11.0|^12.0",
+                "illuminate/validation": "^11.0|^12.0",
+                "nesbot/carbon": "^2.0|^3.0",
+                "php": "^8.2",
+                "spatie/laravel-package-tools": "^1.9",
+                "symfony/http-foundation": "^7.0|^8.0"
+            },
+            "require-dev": {
+                "livewire/livewire": "^3.0",
+                "orchestra/testbench": "^9.0|^10.0",
+                "pestphp/pest": "^2.0|^3.0|^4.0",
+                "pestphp/pest-plugin-livewire": "^1.0|^2.1|^3.0|^4.0",
+                "spatie/pest-plugin-snapshots": "^1.1|^2.1",
+                "spatie/phpunit-snapshot-assertions": "^4.2|^5.1",
+                "spatie/test-time": "^1.2.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Spatie\\Honeypot\\HoneypotServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Honeypot\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Preventing spam submitted through forms",
+            "homepage": "https://github.com/spatie/laravel-honeypot",
+            "keywords": [
+                "laravel-honeypot",
+                "spatie"
+            ],
+            "support": {
+                "source": "https://github.com/spatie/laravel-honeypot/tree/4.6.2"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                }
+            ],
+            "time": "2025-11-28T09:57:48+00:00"
+        },
+        {
+            "name": "spatie/laravel-package-tools",
+            "version": "1.92.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-package-tools.git",
+                "reference": "f09a799850b1ed765103a4f0b4355006360c49a5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/f09a799850b1ed765103a4f0b4355006360c49a5",
+                "reference": "f09a799850b1ed765103a4f0b4355006360c49a5",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^9.28|^10.0|^11.0|^12.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.5",
+                "orchestra/testbench": "^7.7|^8.0|^9.0|^10.0",
+                "pestphp/pest": "^1.23|^2.1|^3.1",
+                "phpunit/php-code-coverage": "^9.0|^10.0|^11.0",
+                "phpunit/phpunit": "^9.5.24|^10.5|^11.5",
+                "spatie/pest-plugin-test-time": "^1.1|^2.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\LaravelPackageTools\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Tools for creating Laravel packages",
+            "homepage": "https://github.com/spatie/laravel-package-tools",
+            "keywords": [
+                "laravel-package-tools",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-package-tools/issues",
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.92.7"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-07-17T15:46:43+00:00"
         },
         {
             "name": "spatie/shiki-php",

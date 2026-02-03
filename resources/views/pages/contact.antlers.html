@@ -105,7 +105,8 @@ title: "Contact | Doug Gough"
             I typically respond within one business day.
           </p>
 
-          {{ form:intake_form class="mt-8 space-y-6" }}
+          {{ form:intake_form js="honeypot" class="mt-8 space-y-6" }}
+            {{ isapp:honeypot }}
 
             {{ if success }}
               <div class="rounded-xl border border-emerald-300 bg-emerald-50 p-6 text-emerald-900">
