@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>New Contact Form Submission</title>
+  <title>New Website Request</title>
   <style>
     body {
       margin: 0;
@@ -77,32 +77,40 @@
       white-space: pre-wrap;
       word-wrap: break-word;
     }
-    .priority-badge {
+    .timeline-badge {
       display: inline-block;
       padding: 6px 12px;
       border-radius: 6px;
       font-size: 14px;
       font-weight: 600;
     }
-    .priority-broken {
+    .timeline-urgent {
       background-color: #fee2e2;
       color: #991b1b;
     }
-    .priority-maintenance {
-      background-color: #dbeafe;
-      color: #1e40af;
-    }
-    .priority-improvements {
-      background-color: #e0e7ff;
-      color: #4338ca;
-    }
-    .priority-new-build {
+    .timeline-soon {
       background-color: #fef3c7;
       color: #92400e;
     }
-    .priority-not-sure {
+    .timeline-flexible {
+      background-color: #dbeafe;
+      color: #1e40af;
+    }
+    .timeline-not-sure {
       background-color: #f3f4f6;
       color: #374151;
+    }
+    .goal-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .goal-list li {
+      padding: 8px 12px;
+      margin-bottom: 6px;
+      background-color: #f1f5f9;
+      border-radius: 6px;
+      border-left: 3px solid #047857;
     }
     .footer {
       padding: 24px;
@@ -121,7 +129,7 @@
 <body>
   <div class="container">
     <div class="header">
-      <h1>📬 New Contact Form Submission</h1>
+      <h1>🌐 New Website Request</h1>
     </div>
 
     <div class="content">
@@ -144,42 +152,79 @@
       </div>
       {{ /if }}
 
-      {{ if url }}
+      {{ if website_url && website_url != '/' }}
       <div class="field">
-        <span class="label">Website URL</span>
+        <span class="label">Current Website URL</span>
         <div class="value">
-          <a href="{{ url }}" target="_blank">{{ url }}</a>
+          <a href="{{ website_url }}" target="_blank">{{ website_url }}</a>
         </div>
       </div>
       {{ /if }}
 
       <div class="field">
-        <span class="label">Priority</span>
+        <span class="label">Desired Timeline</span>
         <div class="value">
-          {{ if priority == 'something_broken' }}
-            <span class="priority-badge priority-broken">🔴 Something is broken</span>
-          {{ elseif priority == 'ongoing_maintenance' }}
-            <span class="priority-badge priority-maintenance">🔵 Ongoing maintenance and support</span>
-          {{ elseif priority == 'improvements' }}
-            <span class="priority-badge priority-improvements">💡 Improvements / next steps</span>
-          {{ elseif priority == 'new_build' }}
-            <span class="priority-badge priority-new-build">🏗️ New build (in an existing relationship)</span>
+          {{ if timeline == '1_2_months' }}
+            <span class="timeline-badge timeline-urgent">⏰ 1–2 months</span>
+          {{ elseif timeline == '3_4_months' }}
+            <span class="timeline-badge timeline-soon">📅 3–4 months</span>
+          {{ elseif timeline == '5_6_months' }}
+            <span class="timeline-badge timeline-flexible">🗓️ 5–6 months</span>
+          {{ elseif timeline == 'flexible' }}
+            <span class="timeline-badge timeline-flexible">✨ Flexible</span>
           {{ else }}
-            <span class="priority-badge priority-not-sure">❓ Not sure yet</span>
+            <span class="timeline-badge timeline-not-sure">❓ Not sure</span>
           {{ /if }}
         </div>
       </div>
 
+      {{ if platform }}
       <div class="field">
-        <span class="label">Message</span>
-        <div class="message-box">{{ inquiry }}</div>
+        <span class="label">Current Platform</span>
+        <div class="value">{{ platform }}</div>
       </div>
+      {{ /if }}
+
+      {{ if goals }}
+      <div class="field">
+        <span class="label">Goals</span>
+        <div class="value">
+          <ul class="goal-list">
+            {{ goals }}
+              <li>
+                {{ if value == 'structure' }}✓ Clearer navigation and structure
+                {{ elseif value == 'content' }}✓ Better content organization
+                {{ elseif value == 'events' }}✓ Events, sermons, or resources
+                {{ elseif value == 'giving' }}✓ Online giving or forms
+                {{ elseif value == 'volunteers' }}✓ Easier updates for volunteers
+                {{ elseif value == 'reliability' }}✓ More reliability and predictability
+                {{ /if }}
+              </li>
+            {{ /goals }}
+          </ul>
+        </div>
+      </div>
+      {{ /if }}
+
+      {{ if situation }}
+      <div class="field">
+        <span class="label">Situation</span>
+        <div class="message-box">{{ situation }}</div>
+      </div>
+      {{ /if }}
+
+      {{ if source_page }}
+      <div class="field">
+        <span class="label">Source Page</span>
+        <div class="value">{{ source_page }}</div>
+      </div>
+      {{ /if }}
     </div>
 
     <div class="footer">
       <p style="margin: 0 0 8px 0;">Submitted on {{ date format="F j, Y" }} at {{ date format="g:i A" }}</p>
       <p style="margin: 0;">
-        <a href="{{ config:app:url }}/cp/forms/intake_form/submissions">View in Control Panel</a>
+        <a href="{{ config:app:url }}/cp/forms/new_website_request/submissions">View in Control Panel</a>
       </p>
     </div>
   </div>

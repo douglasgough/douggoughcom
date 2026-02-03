@@ -223,7 +223,26 @@ title: "Church WordPress Help & Support | Doug Gough"
             If your site is down or showing errors, mention that in the message.
           </p>
 
-          <form class="mt-8 space-y-6" action="#" method="post">
+          {{ form:wordpress_support }}
+
+            {{ if success }}
+              <div class="rounded-xl border border-emerald-300 bg-emerald-50 p-4 text-sm text-emerald-900">
+                <strong>Thank you!</strong> Your WordPress support request has been received. I'll respond within 1 business day.
+              </div>
+            {{ else }}
+
+            {{ if errors }}
+              <div class="rounded-xl border border-red-300 bg-red-50 p-4 text-sm text-red-900">
+                <strong>Please correct the following errors:</strong>
+                <ul class="mt-2 list-disc pl-5">
+                  {{ errors }}
+                    <li>{{ value }}</li>
+                  {{ /errors }}
+                </ul>
+              </div>
+            {{ /if }}
+
+            <div class="mt-8 space-y-6">
             <!-- Tracking (optional) -->
             <input type="hidden" name="source_page" value="church-wordpress-support" />
 
@@ -252,8 +271,8 @@ title: "Church WordPress Help & Support | Doug Gough"
               </div>
 
               <div>
-                <label for="site_url" class="block text-sm font-medium text-slate-900">Website URL</label>
-                <input id="site_url" name="site_url" type="url" placeholder="https://"
+                <label for="website_url" class="block text-sm font-medium text-slate-900">Website URL</label>
+                <input id="website_url" name="website_url" type="url" placeholder="https://"
                   class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-200"
                   required />
               </div>
@@ -335,14 +354,17 @@ title: "Church WordPress Help & Support | Doug Gough"
             </div>
 
             <div>
-              <label for="message" class="block text-sm font-medium text-slate-900">What's going on?</label>
-              <textarea id="message" name="message" rows="7"
+              <label for="details" class="block text-sm font-medium text-slate-900">What's going on?</label>
+              <textarea id="details" name="details" rows="7"
                 class="mt-2 w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-200"
                 placeholder="In a few sentences: what you're seeing, what changed recently (if anything), and what outcome you need."></textarea>
               <p class="mt-2 text-xs text-slate-600">
                 Tip: If you saw an error message, paste it here.
               </p>
             </div>
+
+            <!-- Honeypot spam protection -->
+            <input type="text" name="{{ honeypot ?? 'honeypot' }}" class="hidden" tabindex="-1" autocomplete="off" />
 
             <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <button type="submit"
@@ -356,7 +378,10 @@ title: "Church WordPress Help & Support | Doug Gough"
                    href="mailto:hello@douggough.com">hello@douggough.com</a>
               </p>
             </div>
-          </form>
+            </div>
+
+            {{ /if }}
+          {{ /form:wordpress_support }}
         </div>
       </div>
 

@@ -1,0 +1,10 @@
+title: 'New Website Request'
+email:
+  -
+    id: nw5h75cc
+    to: 'hello@douggough.com, douglas@douggough.com'
+    reply_to: '{{ email }}'
+    subject: 'New Website Request: {{ name }} - {{ org }}'
+    html: email.new_website_request
+    text: false
+    mailer: smtp

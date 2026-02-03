@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>New Contact Form Submission</title>
+  <title>New WordPress Support Request</title>
   <style>
     body {
       margin: 0;
@@ -77,32 +77,40 @@
       white-space: pre-wrap;
       word-wrap: break-word;
     }
-    .priority-badge {
+    .urgency-badge {
       display: inline-block;
       padding: 6px 12px;
       border-radius: 6px;
       font-size: 14px;
       font-weight: 600;
     }
-    .priority-broken {
+    .urgency-urgent {
       background-color: #fee2e2;
       color: #991b1b;
     }
-    .priority-maintenance {
-      background-color: #dbeafe;
-      color: #1e40af;
-    }
-    .priority-improvements {
-      background-color: #e0e7ff;
-      color: #4338ca;
-    }
-    .priority-new-build {
+    .urgency-soon {
       background-color: #fef3c7;
       color: #92400e;
     }
-    .priority-not-sure {
+    .urgency-planned {
+      background-color: #dbeafe;
+      color: #1e40af;
+    }
+    .urgency-not-sure {
       background-color: #f3f4f6;
       color: #374151;
+    }
+    .issue-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .issue-list li {
+      padding: 8px 12px;
+      margin-bottom: 6px;
+      background-color: #f1f5f9;
+      border-radius: 6px;
+      border-left: 3px solid #047857;
     }
     .footer {
       padding: 24px;
@@ -121,7 +129,7 @@
 <body>
   <div class="container">
     <div class="header">
-      <h1>📬 New Contact Form Submission</h1>
+      <h1>🔧 WordPress Support Request</h1>
     </div>
 
     <div class="content">
@@ -144,42 +152,95 @@
       </div>
       {{ /if }}
 
-      {{ if url }}
+      {{ if website_url && website_url != '/' }}
       <div class="field">
         <span class="label">Website URL</span>
         <div class="value">
-          <a href="{{ url }}" target="_blank">{{ url }}</a>
+          <a href="{{ website_url }}" target="_blank">{{ website_url }}</a>
         </div>
       </div>
       {{ /if }}
 
       <div class="field">
-        <span class="label">Priority</span>
+        <span class="label">Urgency</span>
         <div class="value">
-          {{ if priority == 'something_broken' }}
-            <span class="priority-badge priority-broken">🔴 Something is broken</span>
-          {{ elseif priority == 'ongoing_maintenance' }}
-            <span class="priority-badge priority-maintenance">🔵 Ongoing maintenance and support</span>
-          {{ elseif priority == 'improvements' }}
-            <span class="priority-badge priority-improvements">💡 Improvements / next steps</span>
-          {{ elseif priority == 'new_build' }}
-            <span class="priority-badge priority-new-build">🏗️ New build (in an existing relationship)</span>
+          {{ if urgency == 'urgent' }}
+            <span class="urgency-badge urgency-urgent">🔴 Urgent: site is down / broken</span>
+          {{ elseif urgency == 'soon' }}
+            <span class="urgency-badge urgency-soon">⚠️ Soon: issues affecting visitors</span>
+          {{ elseif urgency == 'planned' }}
+            <span class="urgency-badge urgency-planned">📅 Planned: maintenance / improvements</span>
           {{ else }}
-            <span class="priority-badge priority-not-sure">❓ Not sure yet</span>
+            <span class="urgency-badge urgency-not-sure">❓ Not sure</span>
           {{ /if }}
         </div>
       </div>
 
       <div class="field">
-        <span class="label">Message</span>
-        <div class="message-box">{{ inquiry }}</div>
+        <span class="label">Preferred Contact</span>
+        <div class="value">{{ preferred_contact }}</div>
       </div>
+
+      {{ if issue_types }}
+      <div class="field">
+        <span class="label">Issue Types</span>
+        <div class="value">
+          <ul class="issue-list">
+            {{ issue_types }}
+              <li>
+                {{ if value == 'updates' }}Updates / plugin conflicts
+                {{ elseif value == 'down' }}Site down / errors
+                {{ elseif value == 'slow' }}Slow performance
+                {{ elseif value == 'security' }}Security concerns
+                {{ elseif value == 'forms' }}Forms / giving issues
+                {{ elseif value == 'ongoing' }}Ongoing maintenance
+                {{ /if }}
+              </li>
+            {{ /issue_types }}
+          </ul>
+        </div>
+      </div>
+      {{ /if }}
+
+      <div class="field">
+        <span class="label">WordPress Admin Access</span>
+        <div class="value">
+          {{ if wp_access == 'yes' }}✅ Yes
+          {{ elseif wp_access == 'no' }}❌ No
+          {{ else }}❓ Not sure
+          {{ /if }}
+        </div>
+      </div>
+
+      <div class="field">
+        <span class="label">Hosting / Domain Access</span>
+        <div class="value">
+          {{ if hosting_access == 'yes' }}✅ Yes
+          {{ elseif hosting_access == 'no' }}❌ No
+          {{ else }}❓ Not sure
+          {{ /if }}
+        </div>
+      </div>
+
+      {{ if details }}
+      <div class="field">
+        <span class="label">Details</span>
+        <div class="message-box">{{ details }}</div>
+      </div>
+      {{ /if }}
+
+      {{ if source_page }}
+      <div class="field">
+        <span class="label">Source Page</span>
+        <div class="value">{{ source_page }}</div>
+      </div>
+      {{ /if }}
     </div>
 
     <div class="footer">
       <p style="margin: 0 0 8px 0;">Submitted on {{ date format="F j, Y" }} at {{ date format="g:i A" }}</p>
       <p style="margin: 0;">
-        <a href="{{ config:app:url }}/cp/forms/intake_form/submissions">View in Control Panel</a>
+        <a href="{{ config:app:url }}/cp/forms/wordpress_support/submissions">View in Control Panel</a>
       </p>
     </div>
   </div>

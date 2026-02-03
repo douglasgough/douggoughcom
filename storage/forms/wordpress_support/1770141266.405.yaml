@@ -1,0 +1,13 @@
+name: 'Douglas Gough'
+email: dougwgough@gmail.com
+org: 'My Big Church'
+website_url: 'https://mybigchurch.com'
+urgency: planned
+preferred_contact: Email
+issue_types:
+  - updates
+  - security
+wp_access: 'yes'
+hosting_access: 'yes'
+details: 'Second test of URL field'
+source_page: church-wordpress-support

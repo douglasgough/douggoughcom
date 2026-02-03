@@ -1,0 +1,10 @@
+title: 'WordPress Support'
+email:
+  -
+    id: ml5h75cc
+    to: 'hello@douggough.com, douglas@douggough.com'
+    reply_to: '{{ email }}'
+    subject: 'WordPress Support Request: {{ name }} - {{ urgency }}'
+    html: email.wordpress_support
+    text: false
+    mailer: smtp

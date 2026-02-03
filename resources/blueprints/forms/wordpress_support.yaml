@@ -1,0 +1,145 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              type: text
+              display: Name
+              validate:
+                - required
+              autocomplete: name
+          -
+            handle: email
+            field:
+              type: text
+              display: Email
+              validate:
+                - required
+                - email
+              input_type: email
+              autocomplete: email
+          -
+            handle: org
+            field:
+              type: text
+              display: 'Church / Organization'
+              instructions: Optional
+              autocomplete: organization
+          -
+            handle: website_url
+            field:
+              type: text
+              display: 'Website URL'
+              validate:
+                - required
+              input_type: url
+              placeholder: 'https://'
+          -
+            handle: urgency
+            field:
+              type: select
+              display: Urgency
+              validate:
+                - required
+              options:
+                -
+                  key: urgent
+                  value: 'Urgent: site is down / broken'
+                -
+                  key: soon
+                  value: 'Soon: issues affecting visitors'
+                -
+                  key: planned
+                  value: 'Planned: maintenance / improvements'
+                -
+                  key: not_sure
+                  value: 'Not sure'
+              default: planned
+          -
+            handle: preferred_contact
+            field:
+              type: select
+              display: 'Preferred Contact'
+              options:
+                -
+                  key: email
+                  value: Email
+                -
+                  key: call
+                  value: 'Schedule a call'
+                -
+                  key: no_preference
+                  value: 'No preference'
+              default: email
+          -
+            handle: issue_types
+            field:
+              type: checkboxes
+              display: 'What kind of WordPress help?'
+              options:
+                -
+                  key: updates
+                  value: 'Updates / plugin conflicts'
+                -
+                  key: down
+                  value: 'Site down / errors'
+                -
+                  key: slow
+                  value: 'Slow performance'
+                -
+                  key: security
+                  value: 'Security concerns'
+                -
+                  key: forms
+                  value: 'Forms / giving issues'
+                -
+                  key: ongoing
+                  value: 'Ongoing maintenance'
+          -
+            handle: wp_access
+            field:
+              type: select
+              display: 'Do you have WordPress admin access?'
+              options:
+                -
+                  key: 'yes'
+                  value: 'Yes'
+                -
+                  key: 'no'
+                  value: 'No'
+                -
+                  key: not_sure
+                  value: 'Not sure'
+              default: not_sure
+          -
+            handle: hosting_access
+            field:
+              type: select
+              display: 'Do you have hosting/domain access?'
+              options:
+                -
+                  key: 'yes'
+                  value: 'Yes'
+                -
+                  key: 'no'
+                  value: 'No'
+                -
+                  key: not_sure
+                  value: 'Not sure'
+              default: not_sure
+          -
+            handle: details
+            field:
+              type: textarea
+              display: "What's going on?"
+              rows: 7
+              instructions: "In a few sentences: what you're seeing, what changed recently (if anything), and what outcome you need. If you saw an error message, paste it here. Please don't include passwords in this form."
+          -
+            handle: source_page
+            field:
+              type: hidden
+              display: 'Source Page'

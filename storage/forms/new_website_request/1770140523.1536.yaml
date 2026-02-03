@@ -1,0 +1,12 @@
+name: 'Douglas Gough'
+email: dougwgough@gmail.com
+org: 'My Big Church'
+site_url: 'https://mybigchurch.com'
+timeline: 3_4_months
+platform: wordpress
+goals:
+  - structure
+  - giving
+  - reliability
+situation: 'We need a new website.'
+source_page: new-church-website

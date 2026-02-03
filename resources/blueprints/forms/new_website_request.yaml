@@ -1,0 +1,131 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: name
+            field:
+              type: text
+              display: Name
+              validate:
+                - required
+              autocomplete: name
+          -
+            handle: email
+            field:
+              type: text
+              display: Email
+              validate:
+                - required
+                - email
+              input_type: email
+              autocomplete: email
+          -
+            handle: org
+            field:
+              type: text
+              display: 'Church / Organization'
+              instructions: Optional
+              autocomplete: organization
+          -
+            handle: website_url
+            field:
+              type: text
+              display: 'Current Website URL'
+              instructions: 'Optional - if they have an existing site'
+              input_type: url
+              placeholder: 'https://'
+          -
+            handle: timeline
+            field:
+              type: select
+              display: 'Desired Timeline'
+              validate:
+                - required
+              options:
+                -
+                  key: not_sure
+                  value: 'Not sure'
+                -
+                  key: 1_2_months
+                  value: '1–2 months'
+                -
+                  key: 3_4_months
+                  value: '3–4 months'
+                -
+                  key: 5_6_months
+                  value: '5–6 months'
+                -
+                  key: flexible
+                  value: 'Flexible'
+              default: not_sure
+          -
+            handle: platform
+            field:
+              type: select
+              display: 'Current Platform'
+              instructions: 'If known'
+              options:
+                -
+                  key: not_sure
+                  value: 'Not sure'
+                -
+                  key: wordpress
+                  value: 'WordPress'
+                -
+                  key: squarespace
+                  value: 'Squarespace'
+                -
+                  key: wix
+                  value: 'Wix'
+                -
+                  key: weebly
+                  value: 'Weebly'
+                -
+                  key: drupal
+                  value: 'Drupal'
+                -
+                  key: other
+                  value: 'Other'
+                -
+                  key: none
+                  value: 'No current website'
+              default: not_sure
+          -
+            handle: goals
+            field:
+              type: checkboxes
+              display: 'What are you hoping to achieve?'
+              options:
+                -
+                  key: structure
+                  value: 'Clearer navigation and structure'
+                -
+                  key: content
+                  value: 'Better content organization'
+                -
+                  key: events
+                  value: 'Events, sermons, or resources'
+                -
+                  key: giving
+                  value: 'Online giving or forms'
+                -
+                  key: volunteers
+                  value: 'Easier updates for volunteers'
+                -
+                  key: reliability
+                  value: 'More reliability and predictability'
+          -
+            handle: situation
+            field:
+              type: textarea
+              display: 'Tell me about your situation'
+              rows: 7
+              instructions: "What's prompting the rebuild? What needs to change? Any deadlines or constraints? Please don't include passwords in this form."
+          -
+            handle: source_page
+            field:
+              type: hidden
+              display: 'Source Page'
