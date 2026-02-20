@@ -2,7 +2,7 @@
 title: Home
 id: home
 template: pages/home
-blueprint: pages
+blueprint: page
 ---
 ## Welcome to your brand new Statamic site!
 
