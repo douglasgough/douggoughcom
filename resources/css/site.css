@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
 
 /* 1) Single source of truth: swap fonts here */
 :root {
