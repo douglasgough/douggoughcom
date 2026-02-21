@@ -4,6 +4,8 @@ blueprint: page
 title: 'Common Website Risks'
 author: 7f6eb52a-3e92-476e-a3a6-d27250c0966a
 updated_by: 7f6eb52a-3e92-476e-a3a6-d27250c0966a
-updated_at: 1769791109
+updated_at: 1771686912
 template: pages/common-website-risks
+seo:
+  description: 'Websites rarely fail all at once. Learn the most common risks—unclear ownership, hidden fragility, security gaps—so leaders can make calmer decisions.'
 ---

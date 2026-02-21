@@ -4,6 +4,8 @@ blueprint: page
 title: 'Planning Center Integration'
 author: 7f6eb52a-3e92-476e-a3a6-d27250c0966a
 updated_by: 7f6eb52a-3e92-476e-a3a6-d27250c0966a
-updated_at: 1769795993
+updated_at: 1771686943
 template: pages/planning-center-integration
+seo:
+  description: 'Need Planning Center data on your website reliably and securely? Expert-level integration built like real infrastructure: documented and maintainable.'
 ---
