@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EJ8Q8JLPTL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-EJ8Q8JLPTL');
+    </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ title ?? 'DougGough.com — Church Website Support' }}</title>
@@ -18,18 +27,7 @@
 
   <!-- Alpine.js and site JavaScript -->
   {{ vite src="resources/js/site.js" }}
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-BHV349CP7C', {
-      anonymize_ip: true
-    });
-  </script>
+    {{ seo_pro:meta }}
 </head>
 
 <body class="bg-white text-slate-900 font-body">
