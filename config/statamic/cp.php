@@ -53,7 +53,10 @@ return [
     */
 
     'widgets' => [
-        //
+        [
+            'type' => 'seo_pro',
+            'width' => 50,
+        ]
     ],
 
     /*
