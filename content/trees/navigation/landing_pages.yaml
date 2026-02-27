@@ -6,10 +6,9 @@ tree:
     id: ea0c3914-d2f0-49ef-939b-81f393677234
     entry: 6e82432d-e18c-4b96-a768-cecb6b3e103f
   -
-    id: 9ea6a7cd-5eb6-46ca-917a-7779cc441634
-    entry: 37d1b79b-b797-4213-848c-779dd7624445
-    title: 'Schedule a Meeting'
-  -
     id: 81a6404c-cf97-4cbe-91e1-5cefbdd0badb
     entry: 2d3ea123-e34b-44c9-b7a7-fb83b27094cb
     title: 'Website Stewardship for Churches'
+  -
+    id: af737e84-4490-4fec-8a4d-3534a939a9b4
+    entry: f2a8c1d3-e5b7-4a9f-8c2d-6e1b0f3d7a4c
