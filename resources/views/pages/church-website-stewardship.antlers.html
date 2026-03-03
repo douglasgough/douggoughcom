@@ -3,35 +3,18 @@ title: "Website Stewardship for Churches & Christian Organizations | Doug Gough"
 ---
 
 <!-- Hero -->
-<section class="relative overflow-hidden">
-  <div class="absolute inset-0 hero-gradient"></div>
-  <div class="absolute -top-32 right-[-12rem] h-80 w-80 rounded-full bg-emerald-100 blur-3xl opacity-60"></div>
-  <div class="absolute top-40 left-[-10rem] h-72 w-72 rounded-full bg-emerald-100 blur-3xl opacity-50"></div>
-
-  <div class="relative mx-auto max-w-6xl px-5 py-18 sm:px-6 sm:py-24">
-    <div class="max-w-3xl">
-      <p class="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-3 py-1 text-sm text-slate-800">
-        <span class="h-2 w-2 rounded-full bg-emerald-700"></span>
-        Long-term care • clear decisions • steady improvement
-      </p>
-
-      <h1 class="mt-8 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
-        Website Stewardship for Churches &amp; Christian Organizations
-      </h1>
-
-      <p class="mt-5 text-lg leading-relaxed text-slate-800">
-        A church website should support ministry without becoming a source of stress, scrambling, or recurring expense. I provide long-term website care&mdash;stability, clear decisions, and steady improvement&mdash;so your site stays healthy and your team stays focused on what matters.
-      </p>
-
-      <div class="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-        <a href="#"
-           class="inline-flex items-center justify-center rounded-xl bg-emerald-900 px-6 py-4 text-sm font-semibold text-white shadow-sm shadow-emerald-950/10 hover:bg-emerald-950 ring-1 ring-black/5">
-            Book a Meeting
-        </a>
-      </div>
-    </div>
+{{ partial:partials/page-hero-dark }}
+  {{ slot:eyebrow }}Long-term care • clear decisions • steady improvement{{ /slot:eyebrow }}
+  {{ slot:heading }}Website Stewardship for Churches &amp; Christian Organizations{{ /slot:heading }}
+  {{ slot:description }}
+    <p class="mt-6 max-w-xl mx-auto text-lg leading-relaxed text-white/75">
+      A church website should support ministry without becoming a source of stress, scrambling, or recurring expense. I provide long-term website care — stability, clear decisions, and steady improvement — so your site stays healthy and your team stays focused on what matters.
+    </p>
+  {{ /slot:description }}
+  <div class="mt-10 flex gap-4 justify-center flex-wrap">
+    <a href="#" class="inline-flex items-center rounded-lg bg-emerald-600 px-6 py-3 text-sm font-semibold text-white hover:bg-emerald-500 transition-colors">Book a Meeting</a>
   </div>
-</section>
+{{ /partial:partials/page-hero-dark }}
 
 <!-- What Web Stewardship Includes -->
 <section class="border-t border-slate-200/60">

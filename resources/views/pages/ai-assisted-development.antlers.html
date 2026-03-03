@@ -1,20 +1,17 @@
 <!-- Hero -->
-<section class="bg-emerald-950 text-white relative overflow-hidden">
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_60%_0%,rgba(16,185,129,0.2)_0%,transparent_60%)] pointer-events-none"></div>
-  <div class="relative mx-auto max-w-6xl px-5 py-20 sm:px-6 sm:py-28 text-center">
-    <span class="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-4 block">AI-Assisted Development</span>
-    <h1 class="font-heading text-4xl sm:text-5xl font-medium max-w-3xl mx-auto">
-      Custom Functionality Your Organization Can Actually <em class="italic text-emerald-300">Afford</em>
-    </h1>
+{{ partial:partials/page-hero-dark }}
+  {{ slot:eyebrow }}AI-Assisted Development{{ /slot:eyebrow }}
+  {{ slot:heading }}Custom Functionality Your Organization Can Actually <em class="italic text-emerald-300">Afford</em>{{ /slot:heading }}
+  {{ slot:description }}
     <p class="mt-6 max-w-xl mx-auto text-lg leading-relaxed text-white/75">
       AI-assisted development is changing what's financially possible for mid-size organizations — but only when it's done with professional discipline and the right platform underneath it.
     </p>
-    <div class="mt-10 flex gap-4 justify-center flex-wrap">
-      <a href="/contact" class="inline-flex items-center rounded-lg bg-emerald-600 px-6 py-3 text-sm font-semibold text-white hover:bg-emerald-500 transition-colors">Book a Conversation</a>
-      <a href="#ai-explained" class="inline-flex items-center rounded-lg border border-white/35 px-6 py-3 text-sm font-medium text-white/85 hover:border-white/70 hover:text-white transition-colors">How It Works</a>
-    </div>
+  {{ /slot:description }}
+  <div class="mt-10 flex gap-4 justify-center flex-wrap">
+    <a href="/contact" class="inline-flex items-center rounded-lg bg-emerald-600 px-6 py-3 text-sm font-semibold text-white hover:bg-emerald-500 transition-colors">Book a Conversation</a>
+    <a href="#ai-explained" class="inline-flex items-center rounded-lg border border-white/35 px-6 py-3 text-sm font-medium text-white/85 hover:border-white/70 hover:text-white transition-colors">How It Works</a>
   </div>
-</section>
+{{ /partial:partials/page-hero-dark }}
 
 <!-- The SaaS Trap -->
 <section>

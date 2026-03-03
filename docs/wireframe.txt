@@ -1,0 +1,139 @@
+┌─────────────────────────────────────────────────────────┐
+│  HERO                                                   │
+│                                                         │
+│  The best creative work is built                        │
+│  on a solid foundation.                                 │
+│                                                         │
+│  I'm Doug Gough. I bring imagination and                │
+│  systems thinking into every project.                   │
+│                                                         │
+│  [ See My Work ↓ ]   [ How I Work ]                     │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────┐
+│  CURRENT PROJECTS                                       │
+│                                                         │
+│  ┌───────────────────────────────────────────────────┐  │
+│  │  [IMAGE]  ● In Development        Role: Creator   │  │
+│  │           Mara and Peacekeeper One                │  │
+│  │                                                   │  │
+│  │           Some stories need to be built before    │  │
+│  │           they can be told. Mara and Peacekeeper  │  │
+│  │           One begins with extensive worldbuilding │  │
+│  │           — creating the architecture that makes  │  │
+│  │           deep, story-driven gameplay possible.   │  │
+│  │                                                   │  │
+│  │           Learn More →                            │  │
+│  └───────────────────────────────────────────────────┘  │
+│                                                         │
+│  ┌───────────────────────────────────────────────────┐  │
+│  │  [IMAGE]  ● In Development        Role: Creator   │  │
+│  │           Sermon AI                               │  │
+│  │                                                   │  │
+│  │           Every sermon is a resource that         │  │
+│  │           deserves a longer life. Sermon AI is    │  │
+│  │           an application in development that      │  │
+│  │           makes sermon content more accessible,   │  │
+│  │           more searchable, and more useful for    │  │
+│  │           the discipleship work that happens      │  │
+│  │           long after Sunday morning.              │  │
+│  │                                                   │  │
+│  │           Learn More →                            │  │
+│  └───────────────────────────────────────────────────┘  │
+│                                                         │
+│  ┌───────────────────────────────────────────────────┐  │
+│  │  [IMAGE]  ● In Development        Role: Creator   │  │
+│  │           Deep Field Sound                        │  │
+│  │                                                   │  │
+│  │           Deep Field Sound is an artist           │  │
+│  │           collective built around a simple        │  │
+│  │           idea — that science fiction worlds      │  │
+│  │           deserve soundscapes as carefully        │  │
+│  │           crafted as their stories. A platform    │  │
+│  │           for publishing and selling audio        │  │
+│  │           created for worlds that don't           │  │
+│  │           exist yet.                              │  │
+│  │                                                   │  │
+│  │           Learn More →                            │  │
+│  └───────────────────────────────────────────────────┘  │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────┐
+│  HOW I WORK                                             │
+│                                                         │
+│  I've spent 25 years believing that the most            │
+│  important work happens before a line of code           │
+│  is written. Good architecture is like the pillars      │
+│  in a building — invisible when it's done right,        │
+│  but everything depends on it. That's where my          │
+│  energy goes, and it's what frees the creative          │
+│  work to be genuinely good.                             │
+│                                                         │
+│  ┌──────────────────────┐  ┌──────────────────────┐     │
+│  │ Your Vision,         │  │ Capability           │     │
+│  │ Architected          │  │ Accelerated          │     │
+│  │                      │  │                      │     │
+│  │ Every project starts │  │ AI doesn't make me   │     │
+│  │ with a vision. My    │  │ capable. It makes me │     │
+│  │ job is to understand │  │ faster. I use it to  │     │
+│  │ that vision deeply   │  │ accelerate what I'm  │     │
+│  │ enough to build the  │  │ already fully        │     │
+│  │ foundation that      │  │ capable of doing —   │     │
+│  │ makes it real — and  │  │ in architecture, in  │     │
+│  │ expandable. Good     │  │ creativity, and in   │     │
+│  │ architecture doesn't │  │ project management.  │     │
+│  │ constrain creative   │  │                      │     │
+│  │ ambition. It's what  │  │                      │     │
+│  │ makes it possible.   │  │                      │     │
+│  └──────────────────────┘  └──────────────────────┘     │
+│                                                         │
+│  How I Work →                                           │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────┐
+│  WHAT I BUILD                                           │
+│                                                         │
+│  Every project I take on — whether it's a website,      │
+│  a custom application, or a complex integration —       │
+│  starts from the same place: understanding the          │
+│  vision and deriving the architecture before            │
+│  touching the tools.                                    │
+│                                                         │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐   │
+│  │ Web          │  │ Custom       │  │ SaaS         │   │
+│  │ Development  │  │ Applications │  │ Integrations │   │
+│  │              │  │              │  │              │   │
+│  │ Modern sites │  │ When your    │  │ Connecting   │   │
+│  │ built on     │  │ organization │  │ the tools    │   │
+│  │ Laravel and  │  │ needs more   │  │ your         │   │
+│  │ Statamic —   │  │ than a       │  │ organization │   │
+│  │ easy for     │  │ website, I   │  │ already      │   │
+│  │ editors,     │  │ build custom │  │ depends on.  │   │
+│  │ flexible for │  │ applications │  │ Thoughtful   │   │
+│  │ ambitions,   │  │ architected  │  │ integration  │   │
+│  │ built to     │  │ to solve the │  │ work that    │   │
+│  │ grow.        │  │ right        │  │ makes your   │   │
+│  │              │  │ problem.     │  │ systems work │   │
+│  │ Learn More → │  │              │  │ together.    │   │
+│  │              │  │ Learn More → │  │              │   │
+│  │              │  │              │  │ Learn More → │   │
+│  └──────────────┘  └──────────────┘  └──────────────┘   │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────────┐
+│  CONTACT  [dark emerald background]                     │
+│                                                         │
+│  Let's Talk                                             │
+│                                                         │
+│  If any of this resonates, a short conversation         │
+│  is usually enough to know if there's a fit.            │
+│                                                         │
+│                          [ Book a Meeting ]             │
+│                          Or email:                      │
+│                          hello@douggough.com            │
+│                                                         │
+└─────────────────────────────────────────────────────────┘

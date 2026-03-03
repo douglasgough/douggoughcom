@@ -2,12 +2,12 @@
 id: home
 blueprint: page
 title: 'Web Development for Growing Organizations'
-template: pages/home
+template: pages/douggough
 author: 7f6eb52a-3e92-476e-a3a6-d27250c0966a
 seo:
   description: "Your organization has outgrown WordPress but doesn't need Drupal's complexity. Doug Gough builds on Laravel and Statamic—a platform that grows with you."
 updated_by: 7f6eb52a-3e92-476e-a3a6-d27250c0966a
-updated_at: 1771687450
+updated_at: 1772555006
 ---
 ## Welcome to your brand new Statamic site!
 

@@ -1,26 +1,13 @@
 <!-- Hero -->
-<section class="relative overflow-hidden">
-  <div class="absolute inset-0 hero-gradient"></div>
-  <div class="absolute -top-32 right-[-12rem] h-80 w-80 rounded-full bg-emerald-100 blur-3xl opacity-60"></div>
-  <div class="absolute top-40 left-[-10rem] h-72 w-72 rounded-full bg-emerald-100 blur-3xl opacity-50"></div>
-
-  <div class="relative mx-auto max-w-6xl px-5 py-18 sm:px-6 sm:py-24">
-    <div class="max-w-3xl">
-      <p class="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-3 py-1 text-sm text-slate-800">
-        <span class="h-2 w-2 rounded-full bg-emerald-700"></span>
-        Website stewardship • oversight • maintenance • risk
-      </p>
-
-      <h1 class="mt-8 text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl">
-        Common Website Risks
-      </h1>
-
-      <p class="mt-5 text-lg leading-relaxed text-slate-800">
-        Website problems rarely happen all at once. Most build slowly&mdash;as people change, tools age, and small decisions accumulate. This page names the most common risks, regardless of platform, so decision-makers can make clearer, calmer choices about what to do next.
-      </p>
-    </div>
-  </div>
-</section>
+{{ partial:partials/page-hero-dark }}
+  {{ slot:eyebrow }}Website stewardship • oversight • maintenance • risk{{ /slot:eyebrow }}
+  {{ slot:heading }}Common Website Risks{{ /slot:heading }}
+  {{ slot:description }}
+    <p class="mt-6 max-w-xl mx-auto text-lg leading-relaxed text-white/75">
+      Website problems rarely happen all at once. Most build slowly — as people change, tools age, and small decisions accumulate. This page names the most common risks, regardless of platform, so decision-makers can make clearer, calmer choices about what to do next.
+    </p>
+  {{ /slot:description }}
+{{ /partial:partials/page-hero-dark }}
 
 <!-- The most common risks -->
 <section class="border-t border-slate-200/60">
