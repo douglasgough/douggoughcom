@@ -16,7 +16,7 @@
         "laravel/tinker": "^2.10.1",
         "spatie/laravel-honeypot": "^4.6",
         "statamic/cms": "^6.0",
-        "statamic/seo-pro": "^7.0"
+        "statamic/seo-pro": "7.1.1"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.8.1",
