@@ -95,3 +95,172 @@ fields:
                             fields:
                               -
                                 import: card
+            text_section:
+              display: 'Text Section'
+              icon: text
+              fields:
+                -
+                  handle: eyebrow
+                  field:
+                    type: text
+                    display: Eyebrow
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: body
+                  field:
+                    type: markdown
+                    display: Body
+                -
+                  handle: items
+                  field:
+                    type: replicator
+                    display: 'Bullet List'
+                    button_label: 'Add Item'
+                    sets:
+                      items:
+                        display: Items
+                        sets:
+                          item:
+                            display: Item
+                            fields:
+                              -
+                                handle: text
+                                field:
+                                  type: text
+                                  display: Text
+                -
+                  handle: cta_label
+                  field:
+                    type: text
+                    display: 'CTA Label'
+                -
+                  handle: cta_link
+                  field:
+                    type: link
+                    display: 'CTA Link'
+                    collections:
+                      - pages
+            two_col:
+              display: 'Two Column'
+              icon: layout-columns
+              fields:
+                -
+                  handle: left_heading
+                  field:
+                    type: text
+                    display: 'Left Heading'
+                -
+                  handle: left_body
+                  field:
+                    type: markdown
+                    display: 'Left Body'
+                -
+                  handle: right_heading
+                  field:
+                    type: text
+                    display: 'Right Heading'
+                -
+                  handle: right_body
+                  field:
+                    type: markdown
+                    display: 'Right Body'
+                -
+                  handle: right_items
+                  field:
+                    type: replicator
+                    display: 'Right Bullet List'
+                    button_label: 'Add Item'
+                    sets:
+                      items:
+                        display: Items
+                        sets:
+                          item:
+                            display: Item
+                            fields:
+                              -
+                                handle: text
+                                field:
+                                  type: text
+                                  display: Text
+                -
+                  handle: right_style
+                  field:
+                    type: select
+                    display: 'Right Column Style'
+                    default: default
+                    options:
+                      default: Default
+                      emerald: Emerald
+            callout:
+              display: Callout
+              icon: alert-circle
+              fields:
+                -
+                  handle: style
+                  field:
+                    type: select
+                    display: Style
+                    default: dark
+                    options:
+                      dark: Dark
+                      light: Light
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: body
+                  field:
+                    type: markdown
+                    display: Body
+            cta_dark:
+              display: 'CTA (Dark)'
+              icon: cursor-click
+              fields:
+                -
+                  handle: heading
+                  field:
+                    type: text
+                    display: Heading
+                -
+                  handle: body
+                  field:
+                    type: markdown
+                    display: Body
+                -
+                  handle: button_label
+                  field:
+                    type: text
+                    display: 'Button Label'
+                -
+                  handle: button_link
+                  field:
+                    type: link
+                    display: 'Button Link'
+                    collections:
+                      - pages
+                -
+                  handle: email_text
+                  field:
+                    type: text
+                    display: 'Email Text'
+                    instructions: 'e.g. hello@douggough.com'
+            component:
+              display: Component
+              icon: code
+              fields:
+                -
+                  handle: handle
+                  field:
+                    type: select
+                    display: Component
+                    options:
+                      laravel-timeline: 'Laravel Timeline'
+                      ai-comparison: 'AI vs Vibe Coding Comparison'
+                      platform-comparison: 'Platform Comparison (Tabbed)'
+                      pc-done: 'What Done Looks Like'
