@@ -1,0 +1,86 @@
+<!-- Platform Comparison -->
+<section>
+  <div class="mx-auto max-w-6xl px-5 py-14 sm:px-6 sm:py-20">
+    <p class="text-xs font-bold uppercase tracking-widest text-emerald-700 mb-3">The Right Foundation Matters</p>
+    <div class="max-w-3xl">
+      <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Why Laravel Is the Right Platform for Custom Functionality</h2>
+      <p class="mt-4 text-slate-700 leading-relaxed">Not every platform is equally suited to AI-assisted custom development. The platform you build on shapes what's possible, how long it takes, and how maintainable the result is. Here's an honest comparison.</p>
+    </div>
+
+    <div class="mt-10 space-y-4">
+
+      <!-- WordPress -->
+      <div class="rounded-2xl border border-slate-200/60 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="inline-flex rounded px-2 py-1 text-xs font-bold uppercase tracking-wider bg-amber-100 text-amber-800">Proceed with Caution</span>
+          <h3 class="text-base font-semibold text-slate-900">WordPress</h3>
+        </div>
+        <p class="text-sm leading-relaxed text-slate-700">WordPress is an exceptional content management platform — for content. Its architecture is built around posts, pages, and themes. Custom application functionality gets bolted onto that structure through plugins and hooks, which creates technical debt by design. AI tools can generate WordPress code quickly, but the underlying architecture still imposes the same constraints. You end up with functionality that works today and becomes fragile as your needs evolve. For organizations whose needs are primarily content-driven, WordPress remains a solid choice. For organizations building custom functionality, it's the wrong foundation.</p>
+      </div>
+
+      <!-- Drupal -->
+      <div class="rounded-2xl border border-slate-200/60 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="inline-flex rounded px-2 py-1 text-xs font-bold uppercase tracking-wider bg-red-100 text-red-800">High Complexity, High Cost</span>
+          <h3 class="text-base font-semibold text-slate-900">Drupal</h3>
+        </div>
+        <p class="text-sm leading-relaxed text-slate-700">Drupal is a powerful, enterprise-grade platform — and that power comes at a cost. Its architecture is sophisticated, its learning curve is steep, and the developer ecosystem is smaller than it once was. AI tools help, but Drupal's complexity doesn't compress easily. The generated code still needs to conform to Drupal's patterns, hooks, and module system, which requires genuine Drupal expertise to get right. For large organizations with dedicated technical staff who already use Drupal's enterprise features, the investment may be justified. For organizations that chose Drupal years ago and have never actually needed its enterprise capabilities, there's a better path.</p>
+      </div>
+
+      <!-- Laravel + Statamic -->
+      <div class="rounded-2xl border-2 border-emerald-600/40 bg-white p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="inline-flex rounded px-2 py-1 text-xs font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800">Recommended</span>
+          <h3 class="text-base font-semibold text-slate-900">Laravel + Statamic</h3>
+        </div>
+        <p class="text-sm leading-relaxed text-slate-700">Laravel is a modern PHP application framework — not a CMS with application features bolted on, but an application framework with content management available through Statamic. This distinction is fundamental. When you need to build a member portal, a custom submission workflow, an integration with your existing tools, or any functionality specific to how your organization operates, Laravel gives you a clean, well-structured foundation to build it on.</p>
+        <p class="mt-3 text-sm leading-relaxed text-slate-700">What separates Laravel from the alternatives right now is the sophistication of its AI tooling ecosystem — and the pace at which that ecosystem is growing. The Laravel team itself has invested directly in AI-assisted development in a way that WordPress and Drupal simply haven't.</p>
+
+        <!-- Tooling Tabs -->
+        <div class="mt-6 border border-slate-200 rounded-xl overflow-hidden" x-data="{ activeTab: 'boost' }">
+          <div class="flex border-b border-slate-200 bg-slate-50" role="tablist">
+            <button
+              role="tab"
+              :aria-selected="activeTab === 'boost'"
+              @click="activeTab = 'boost'"
+              :class="activeTab === 'boost' ? 'text-emerald-700 bg-white border-b-2 border-emerald-600' : 'text-slate-500 hover:text-emerald-700 hover:bg-emerald-50/50'"
+              class="flex-1 px-4 py-3 text-sm font-semibold -mb-px transition-colors cursor-pointer"
+            >Laravel Boost</button>
+            <button
+              role="tab"
+              :aria-selected="activeTab === 'ide'"
+              @click="activeTab = 'ide'"
+              :class="activeTab === 'ide' ? 'text-emerald-700 bg-white border-b-2 border-emerald-600' : 'text-slate-500 hover:text-emerald-700 hover:bg-emerald-50/50'"
+              class="flex-1 px-4 py-3 text-sm font-semibold -mb-px transition-colors cursor-pointer"
+            >IDE Integration</button>
+            <button
+              role="tab"
+              :aria-selected="activeTab === 'ecosystem'"
+              @click="activeTab = 'ecosystem'"
+              :class="activeTab === 'ecosystem' ? 'text-emerald-700 bg-white border-b-2 border-emerald-600' : 'text-slate-500 hover:text-emerald-700 hover:bg-emerald-50/50'"
+              class="flex-1 px-4 py-3 text-sm font-semibold -mb-px transition-colors cursor-pointer"
+            >Growing Ecosystem</button>
+          </div>
+          <div class="bg-white p-6">
+            <div x-show="activeTab === 'boost'" x-cloak>
+              <p class="text-sm leading-relaxed text-slate-700">An official AI development assistant built by the Laravel team. Boost provides AI agents with 15 specialized tools to scan your codebase, read application logs, run database queries, inspect routes, execute Artisan commands, and query Laravel's documentation API — all in real time. Instead of generating generic code from a prompt, Boost-equipped AI tools generate code that understands your specific database schema, your installed packages, and your application's actual configuration. The result is code that fits your project, not code that approximates what a Laravel project might look like.</p>
+            </div>
+            <div x-show="activeTab === 'ide'" x-cloak>
+              <p class="text-sm leading-relaxed text-slate-700">Laravel's conventions are deeply understood by the leading PHP development environments. PHPStorm's Laravel plugin provides full route navigation, Blade template awareness, Eloquent model completion, and Artisan command support. VS Code's Laravel ecosystem — including the Laravel Extra Intellisense and Intelephense extensions — brings the same depth to the most widely used code editor in the world. When AI coding assistants like GitHub Copilot and Cursor operate inside these environments, they inherit this context. The AI isn't guessing at your application's structure — it can see it.</p>
+            </div>
+            <div x-show="activeTab === 'ecosystem'" x-cloak>
+              <p class="text-sm leading-relaxed text-slate-700">Laravel's GitHub repository has over 83,000 stars and an active, growing contributor base. The framework releases new AI-focused tools — Boost, an AI SDK, MCP server support — on a regular cadence. Drupal's developer community has been contracting for years as the platform moved upmarket toward enterprise. WordPress's AI tooling is plugin-dependent and fragmented, with no coordinated investment from the core team. The practical consequence: the AI tools available for Laravel work better, get updated faster, and produce more reliable output than equivalent tooling for either alternative.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="mt-6 text-sm leading-relaxed text-slate-700">Statamic sits on top of all of this, giving your editors a content management experience that doesn't require technical expertise. The combination is the most suitable platform available for organizations whose needs sit between simple content sites and full enterprise software — and it's the platform best positioned to keep improving as AI-assisted development matures.</p>
+
+        <div class="mt-6">
+          <a href="/contact" class="inline-flex items-center rounded-lg border-2 border-emerald-600 text-emerald-700 px-5 py-2.5 text-sm font-semibold hover:bg-emerald-600 hover:text-white transition-colors">Request a Demo</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
