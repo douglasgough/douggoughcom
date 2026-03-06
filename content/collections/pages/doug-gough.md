@@ -5,9 +5,9 @@ title: 'Doug Gough'
 author: 7f6eb52a-3e92-476e-a3a6-d27250c0966a
 template: pages/landing-page
 updated_by: 7f6eb52a-3e92-476e-a3a6-d27250c0966a
-updated_at: 1772474417
+updated_at: 1772829302
 seo:
-    description: "Your organization has outgrown WordPress but doesn't need Drupal's complexity. Doug Gough builds on Laravel and Statamic—a platform that grows with you."
+  description: "Your organization has outgrown WordPress but doesn't need Drupal's complexity. Doug Gough builds on Laravel and Statamic—a platform that grows with you."
 scaffold:
   -
     id: fV2jLJdI0Kevd6IWiqN7m
@@ -42,24 +42,36 @@ scaffold:
         enabled: true
         heading: 'Frustrated Editors'
         body: "The people who update your website dread using it. A system that's hard to use doesn't get used—and a site that doesn't get updated stops working for your organization."
+        style: default
+        accent: none
+        full_width: false
       -
         id: bU3oXeLrZqNw8dAySkCt
         type: card
         enabled: true
         heading: 'Expensive Simple Changes'
         body: "Simple changes shouldn't require a specialist. When every update needs outside help, your website becomes a bottleneck instead of an asset."
+        style: default
+        accent: none
+        full_width: false
       -
         id: cV4pYfMsArOx9eBzTlDu
         type: card
         enabled: true
         heading: 'Ambitions Beyond Content'
-        body: "Membership management, online tools, partner portals—your next phase needs a platform that can grow with you."
+        body: 'Membership management, online tools, partner portals—your next phase needs a platform that can grow with you.'
+        style: default
+        accent: none
+        full_width: false
       -
         id: dW5qZgNtBsPy0fCaUmEv
         type: card
         enabled: true
         heading: 'Upgrade Sticker Shock'
         body: "A major platform upgrade is a significant investment. Before you spend that kind of money, it's worth understanding exactly what you're buying and whether it solves the right problem."
+        style: default
+        accent: none
+        full_width: false
   -
     id: hX6rAiNuCsQw1gDbUkFp
     type: text_section
@@ -71,7 +83,7 @@ scaffold:
         id: iY7sBjOvDtRx2hEcVlGq
         type: item
         enabled: true
-        text: "A national organization that outgrew Drupal when it evolved into an enterprise platform they never needed"
+        text: 'A national organization that outgrew Drupal when it evolved into an enterprise platform they never needed'
       -
         id: jZ8tCkPwEuSy3iFdWmHr
         type: item
@@ -81,13 +93,13 @@ scaffold:
         id: kA9uDlQxFvTz4jGeXnIs
         type: item
         enabled: true
-        text: "Organizations that chose WordPress for simplicity and eventually hit its ceiling at the worst possible time"
+        text: 'Organizations that chose WordPress for simplicity and eventually hit its ceiling at the worst possible time'
   -
     id: lB0vEmRyGwUa5kHfYoJt
     type: text_section
     enabled: true
     heading: 'The Full Story'
-    body: |
+    body: |-
       A decade ago I built a Drupal site for a national medical organization. It was the right choice at the time. Then Drupal evolved into an enterprise platform—more powerful, more complex, and more expensive to maintain. Organizations like theirs, who never needed that level of complexity, found themselves facing a difficult upgrade decision they didn't ask for.
 
       I've also seen what happens when a large, multi-location service franchise pushes a content management system past its limits. The editors found it difficult to use and eventually the organization built workarounds on a separate platform just to get their content needs met. When it came time to integrate online booking, we hit a wall. A content management system, no matter how powerful, isn't an application framework. The integration work that should have taken weeks took years.
@@ -130,5 +142,5 @@ scaffold:
     body: "A short conversation is usually enough to know whether this is the right fit—and if it's not, I'll point you in the right direction."
     button_label: 'Book a Meeting'
     button_link: 'entry::b32ff7c7-bb6d-431d-aed3-d2f233b9b428'
-    email_text: 'hello@douggough.com'
+    email_text: hello@douggough.com
 ---
