@@ -90,7 +90,7 @@ scaffold:
             id: eF1oXfKrZpNt4dAyRhCm
             type: item
             enabled: true
-            text: 'A quick plugin install and you're done'
+            text: "A quick plugin install and you're done"
           -
             id: fG2pYgLsAqOu5eBzSiDn
             type: item
