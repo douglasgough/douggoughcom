@@ -1,5 +1,6 @@
 <!-- Card -->
 <div class="rounded-2xl p-6 {{ if style == 'emerald' }}border border-emerald-200/50 bg-emerald-50{{ elseif style == 'dark' }}bg-emerald-950 text-white{{ elseif style == 'featured' }}border-2 border-emerald-600/40 bg-white{{ elseif style == 'borderless' }}border border-slate-200/60{{ else }}border border-slate-200/60 bg-white{{ /if }}{{ if accent == 'red' }} border-t-4 border-t-red-500{{ elseif accent == 'emerald' }} border-t-4 border-t-emerald-600{{ /if }}{{ if full_width }} col-span-full{{ /if }}">
+  {{ if icon }}<div class="mb-3 text-2xl">{{ icon }}</div>{{ /if }}
   {{ if label }}
     <p class="mb-3 text-xs font-bold uppercase tracking-wider {{ if accent == 'red' }}text-red-600{{ elseif style == 'dark' }}text-emerald-300{{ else }}text-emerald-700{{ /if }}">{{ label }}</p>
   {{ /if }}

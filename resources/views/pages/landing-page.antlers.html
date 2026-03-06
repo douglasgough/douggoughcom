@@ -1,0 +1,7 @@
+{{ scaffold }}
+  {{ if type == 'component' }}
+    {{ partial src="partials/components/{handle}" }}
+  {{ else }}
+    {{ partial src="partials/page_builder/{type}" }}
+  {{ /if }}
+{{ /scaffold }}

@@ -1,6 +1,12 @@
 title: Card
 fields:
   -
+    handle: icon
+    field:
+      type: text
+      display: Icon
+      instructions: 'Emoji or short text icon (e.g. 🎯)'
+  -
     handle: label
     field:
       type: text
