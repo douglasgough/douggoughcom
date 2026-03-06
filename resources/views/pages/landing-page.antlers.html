@@ -1,7 +1,7 @@
 {{ scaffold }}
   {{ if type == 'component' }}
-    {{ partial :src="'partials/components/' + handle" }}
+    {{ partial :src="handle | prepend:'partials/components/'" }}
   {{ else }}
-    {{ partial :src="'partials/page_builder/' + type" }}
+    {{ partial :src="type | prepend:'partials/page_builder/'" }}
   {{ /if }}
 {{ /scaffold }}
