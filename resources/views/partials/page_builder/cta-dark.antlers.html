@@ -1,0 +1,25 @@
+<!-- CTA Dark -->
+<section id="contact" class="border-t border-slate-300 bg-emerald-950 text-white">
+  <div class="mx-auto max-w-6xl px-5 py-14 sm:px-6 sm:py-20">
+    <div class="grid gap-8 md:grid-cols-12 md:items-center">
+      <div class="md:col-span-8">
+        <h2 class="text-2xl font-semibold tracking-tight">{{ heading }}</h2>
+        {{ if body }}
+          <div class="mt-3 text-emerald-50/90">{{ body | markdown }}</div>
+        {{ /if }}
+      </div>
+      <div class="md:col-span-4 md:text-right">
+        {{ if button_label }}
+          <a href="{{ button_link }}" class="inline-flex w-full items-center justify-center rounded-xl bg-white px-5 py-3 text-sm font-semibold text-emerald-950 hover:bg-emerald-50 md:w-auto">
+            {{ button_label }}
+          </a>
+        {{ /if }}
+        {{ if email_text }}
+          <p class="mt-3 text-xs text-emerald-50/80">
+            Or email: <span class="underline decoration-white/40 underline-offset-4">{{ email_text }}</span>
+          </p>
+        {{ /if }}
+      </div>
+    </div>
+  </div>
+</section>
