@@ -1,0 +1,64 @@
+title: Card
+fields:
+  -
+    handle: label
+    field:
+      type: text
+      display: Label
+      instructions: 'Small uppercase label above the heading'
+  -
+    handle: heading
+    field:
+      type: text
+      display: Heading
+  -
+    handle: body
+    field:
+      type: markdown
+      display: Body
+  -
+    handle: items
+    field:
+      type: replicator
+      display: 'Bullet List'
+      button_label: 'Add Item'
+      sets:
+        items:
+          display: Items
+          sets:
+            item:
+              display: Item
+              fields:
+                -
+                  handle: text
+                  field:
+                    type: text
+                    display: Text
+  -
+    handle: style
+    field:
+      type: select
+      display: Style
+      default: default
+      options:
+        default: Default
+        emerald: Emerald
+        dark: Dark
+        featured: Featured
+        borderless: Borderless
+  -
+    handle: accent
+    field:
+      type: select
+      display: 'Top Accent'
+      default: none
+      options:
+        none: None
+        red: Red
+        emerald: Emerald
+  -
+    handle: full_width
+    field:
+      type: toggle
+      display: 'Full Width'
+      instructions: 'Span all grid columns'

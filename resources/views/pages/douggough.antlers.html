@@ -3,47 +3,13 @@ title: "DougGough.com — Web Development for Growing Organizations"
 ---
 
 <!-- Hero -->
-{{ partial:partials/page-hero-dark }}
-  {{ slot:eyebrow }}Web Development{{ /slot:eyebrow }}
-  {{ slot:heading }}If you're facing a major website rebuild, you have <em class="italic text-emerald-300">more options</em> than you think.{{ /slot:heading }}
-  {{ slot:description }}
-    <p class="mt-6 max-w-xl mx-auto text-lg leading-relaxed text-white/75">
-      Most organizations arrive at the same crossroads. Your current site is aging. A major upgrade is expensive and disruptive. And the obvious alternatives don't match your ambitions.
-    </p>
-  {{ /slot:description }}
-  <div class="mt-10 flex gap-4 justify-center flex-wrap">
-    <a href="/contact" class="inline-flex items-center rounded-lg bg-emerald-600 px-6 py-3 text-sm font-semibold text-white hover:bg-emerald-500 transition-colors">Book a Meeting</a>
-    <a href="/why-laravel-statamic" class="inline-flex items-center rounded-lg border border-white/35 px-6 py-3 text-sm font-medium text-white/85 hover:border-white/70 hover:text-white transition-colors">Why Laravel + Statamic</a>
-  </div>
-{{ /partial:partials/page-hero-dark }}
-
-<!-- Pain Points -->
-<section id="pain-points" class="border-t border-slate-200/60">
-    <div class="mx-auto max-w-6xl px-5 py-14 sm:px-6 sm:py-20">
-        <div class="max-w-3xl">
-            <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Sound Familiar?</h2>
-        </div>
-
-        <div class="mt-10 grid gap-4 md:grid-cols-2">
-            <div class="rounded-2xl border border-slate-200/60 bg-white p-6">
-                <div class="text-base font-semibold text-slate-900">Frustrated Editors</div>
-                <p class="mt-2 text-sm leading-relaxed text-slate-700">The people who update your website dread using it. A system that's hard to use doesn't get used&mdash;and a site that doesn't get updated stops working for your organization.</p>
-            </div>
-            <div class="rounded-2xl border border-slate-200/60 bg-white p-6">
-                <div class="text-base font-semibold text-slate-900">Expensive Simple Changes</div>
-                <p class="mt-2 text-sm leading-relaxed text-slate-700">Simple changes shouldn't require a specialist. When every update needs outside help, your website becomes a bottleneck instead of an asset.</p>
-            </div>
-            <div class="rounded-2xl border border-slate-200/60 bg-white p-6">
-                <div class="text-base font-semibold text-slate-900">Ambitions Beyond Content</div>
-                <p class="mt-2 text-sm leading-relaxed text-slate-700">Membership management, online tools, partner portals&mdash;your next phase needs a platform that can grow with you.</p>
-            </div>
-            <div class="rounded-2xl border border-slate-200/60 bg-white p-6">
-                <div class="text-base font-semibold text-slate-900">Upgrade Sticker Shock</div>
-                <p class="mt-2 text-sm leading-relaxed text-slate-700">A major platform upgrade is a significant investment. Before you spend that kind of money, it's worth understanding exactly what you're buying and whether it solves the right problem.</p>
-            </div>
-        </div>
-    </div>
-</section>
+{{ scaffold }}
+  {{ if type == 'hero' }}
+    {{ partial:partials/page-hero-dark }}
+  {{ elseif type == 'card_grid' }}
+    {{ partial:partials/card-grid }}
+  {{ /if }}
+{{ /scaffold }}
 
 <!-- Credibility Flash -->
 <section class="border-t border-slate-200/60">

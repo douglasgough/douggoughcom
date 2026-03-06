@@ -1,12 +1,26 @@
 <!-- Dark Page Hero -->
-<section class="bg-emerald-950 text-white relative overflow-hidden">
+<section class="page-hero-dark bg-emerald-950 text-white relative overflow-hidden">
   <div class="hero-dark-overlay"></div>
   <div class="relative mx-auto max-w-6xl px-5 py-20 sm:px-6 sm:py-28 text-center">
-    <span class="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-4 block">{{ slot:eyebrow }}</span>
-    <h1 class="font-heading text-4xl sm:text-5xl font-medium max-w-3xl mx-auto">
-      {{ slot:heading }}
-    </h1>
-    {{ slot:description }}
-    {{ slot }}
+    {{ if eyebrow }}
+      <span class="text-xs font-semibold uppercase tracking-widest text-emerald-400 mb-4 block">{{ eyebrow }}</span>
+    {{ /if }}
+    {{ if heading }}
+      <h1 class="font-heading text-4xl sm:text-5xl font-medium max-w-3xl mx-auto">
+        {{ heading | markdown | strip_tags:p }}
+      </h1>
+    {{ /if }}
+    {{ if description }}
+      <div class="mt-6 max-w-2xl mx-auto text-lg leading-relaxed text-white/75">
+        {{ description | markdown }}
+      </div>
+    {{ /if }}
+    {{ if button_group }}
+      <div class="mt-10 flex gap-4 justify-center flex-wrap">
+        {{ button_group }}
+          <a href="{{ button_link }}" class="hero-cta inline-flex items-center rounded-lg px-6 py-3 text-sm font-semibold transition-colors">{{ button_label }}</a>
+        {{ /button_group }}
+      </div>
+    {{ /if }}
   </div>
 </section>

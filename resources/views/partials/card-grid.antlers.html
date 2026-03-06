@@ -1,0 +1,18 @@
+<!-- Card Grid -->
+<section class="border-t border-slate-200/60">
+  <div class="mx-auto max-w-6xl px-5 py-14 sm:px-6 sm:py-20">
+    {{ if section_heading }}
+      <div class="max-w-3xl">
+        <h2 class="text-2xl font-semibold tracking-tight text-slate-900">{{ section_heading }}</h2>
+        {{ if section_body }}
+          <div class="mt-3 text-slate-700">{{ section_body | markdown }}</div>
+        {{ /if }}
+      </div>
+    {{ /if }}
+    <div class="{{ if section_heading }}mt-10 {{ /if }}grid gap-4 {{ if columns == '3' }}md:grid-cols-3{{ else }}md:grid-cols-2{{ /if }}">
+      {{ cards }}
+        {{ partial:partials/card }}
+      {{ /cards }}
+    </div>
+  </div>
+</section>

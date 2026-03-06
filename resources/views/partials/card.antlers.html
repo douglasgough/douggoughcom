@@ -1,0 +1,22 @@
+<!-- Card -->
+<div class="rounded-2xl p-6 {{ if style == 'emerald' }}border border-emerald-200/50 bg-emerald-50{{ elseif style == 'dark' }}bg-emerald-950 text-white{{ elseif style == 'featured' }}border-2 border-emerald-600/40 bg-white{{ elseif style == 'borderless' }}border border-slate-200/60{{ else }}border border-slate-200/60 bg-white{{ /if }}{{ if accent == 'red' }} border-t-4 border-t-red-500{{ elseif accent == 'emerald' }} border-t-4 border-t-emerald-600{{ /if }}{{ if full_width }} col-span-full{{ /if }}">
+  {{ if label }}
+    <p class="mb-3 text-xs font-bold uppercase tracking-wider {{ if accent == 'red' }}text-red-600{{ elseif style == 'dark' }}text-emerald-300{{ else }}text-emerald-700{{ /if }}">{{ label }}</p>
+  {{ /if }}
+  {{ if heading }}
+    <div class="text-base font-semibold {{ if style == 'dark' }}text-white{{ else }}text-slate-900{{ /if }}">{{ heading }}</div>
+  {{ /if }}
+  {{ if body }}
+    <div class="mt-2 text-sm leading-relaxed {{ if style == 'dark' }}text-white/85{{ else }}text-slate-700{{ /if }}">{{ body | markdown }}</div>
+  {{ /if }}
+  {{ if items }}
+    <ul class="mt-4 space-y-2 text-sm {{ if style == 'dark' }}text-white/85{{ else }}text-slate-700{{ /if }}">
+      {{ items }}
+        <li class="flex gap-2">
+          <span class="mt-1.5 h-2 w-2 shrink-0 rounded-full {{ if style == 'dark' }}bg-emerald-400{{ else }}bg-emerald-700{{ /if }}"></span>
+          <span>{{ text }}</span>
+        </li>
+      {{ /items }}
+    </ul>
+  {{ /if }}
+</div>

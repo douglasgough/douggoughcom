@@ -82,6 +82,35 @@
         );
     }
 
+    /* CTA buttons in the dark hero */
+    .hero-cta:first-child {
+        background-color: oklch(55.8% 0.158 163); /* emerald-600 */
+        color: white;
+        font-weight: 600;
+    }
+
+    .hero-cta:first-child:hover {
+        background-color: oklch(62.7% 0.194 163); /* emerald-500 */
+    }
+
+    .hero-cta:not(:first-child) {
+        border: 1px solid rgb(255 255 255 / 0.35);
+        color: rgb(255 255 255 / 0.85);
+        font-weight: 500;
+    }
+
+    .hero-cta:not(:first-child):hover {
+        border-color: rgb(255 255 255 / 0.70);
+        color: white;
+    }
+
+    /* Strong emphasis in dark hero heading renders as green italic */
+    .page-hero-dark h1 strong {
+        color: oklch(74.6% 0.16 160); /* emerald-300 */
+        font-style: italic;
+        font-weight: inherit;
+    }
+
     /* Dark hero radial gradient overlay - single source of truth */
     .hero-dark-overlay {
         position: absolute;

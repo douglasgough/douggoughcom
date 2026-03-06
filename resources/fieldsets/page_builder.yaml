@@ -1,0 +1,97 @@
+title: 'Page Builder'
+fields:
+  -
+    handle: scaffold
+    field:
+      type: replicator
+      display: Scaffold
+      sets:
+        interactive:
+          display: Interactive
+          icon: cursor-click
+          sets:
+            hero:
+              display: Hero
+              icon: hero-image-above-text
+              fields:
+                -
+                  handle: eyebrow
+                  field:
+                    type: text
+                    display: Eyebrow
+                -
+                  handle: heading
+                  field:
+                    type: markdown
+                    display: Heading
+                -
+                  handle: description
+                  field:
+                    type: markdown
+                    display: Description
+                -
+                  handle: button_group
+                  field:
+                    type: replicator
+                    display: 'Button Group'
+                    button_label: 'New Button'
+                    sets:
+                      buttons:
+                        display: Buttons
+                        sets:
+                          button:
+                            display: Button
+                            icon: cursor-click
+                            fields:
+                              -
+                                handle: button_label
+                                field:
+                                  type: text
+                                  display: 'Button Label'
+                              -
+                                handle: button_link
+                                field:
+                                  type: link
+                                  display: 'Button Link'
+        content:
+          display: Content
+          icon: paragraph-align-left
+          sets:
+            card_grid:
+              display: 'Card Grid'
+              icon: grid-4
+              fields:
+                -
+                  handle: section_heading
+                  field:
+                    type: text
+                    display: 'Section Heading'
+                -
+                  handle: section_body
+                  field:
+                    type: markdown
+                    display: 'Section Body'
+                -
+                  handle: columns
+                  field:
+                    type: select
+                    display: Columns
+                    default: '2'
+                    options:
+                      '2': '2 Columns'
+                      '3': '3 Columns'
+                -
+                  handle: cards
+                  field:
+                    type: replicator
+                    display: Cards
+                    button_label: 'Add Card'
+                    sets:
+                      cards:
+                        display: Cards
+                        sets:
+                          card:
+                            display: Card
+                            fields:
+                              -
+                                import: card
