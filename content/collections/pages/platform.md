@@ -1,11 +1,11 @@
 ---
 id: 4f334259-e139-4bc3-bd73-0ddc07bc9cb4
 blueprint: page
-title: 'Doug Gough'
+title: 'Is Your CMS Holding You Back?'
 author: 7f6eb52a-3e92-476e-a3a6-d27250c0966a
 template: pages/landing-page
 updated_by: 7f6eb52a-3e92-476e-a3a6-d27250c0966a
-updated_at: 1772829302
+updated_at: 1772906605
 seo:
   description: "Your organization has outgrown WordPress but doesn't need Drupal's complexity. Doug Gough builds on Laravel and Statamic—a platform that grows with you."
 scaffold:
@@ -13,7 +13,7 @@ scaffold:
     id: fV2jLJdI0Kevd6IWiqN7m
     type: hero
     enabled: true
-    eyebrow: 'Web Development'
+    eyebrow: 'CMS Options'
     heading: "If you're facing a major website rebuild, you have **more options** than you think."
     description: "Most organizations arrive at the same crossroads. Your current site is aging. A major upgrade is expensive and disruptive. And the obvious alternatives don't match your ambitions."
     button_group:
