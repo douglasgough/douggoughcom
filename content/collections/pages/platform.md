@@ -5,7 +5,7 @@ title: 'Is Your CMS Holding You Back?'
 author: 7f6eb52a-3e92-476e-a3a6-d27250c0966a
 template: pages/landing-page
 updated_by: 7f6eb52a-3e92-476e-a3a6-d27250c0966a
-updated_at: 1772906605
+updated_at: 1772910294
 seo:
   description: "Your organization has outgrown WordPress but doesn't need Drupal's complexity. Doug Gough builds on Laravel and Statamic—a platform that grows with you."
 scaffold:
@@ -13,7 +13,7 @@ scaffold:
     id: fV2jLJdI0Kevd6IWiqN7m
     type: hero
     enabled: true
-    eyebrow: 'CMS Options'
+    eyebrow: 'Web Development'
     heading: "If you're facing a major website rebuild, you have **more options** than you think."
     description: "Most organizations arrive at the same crossroads. Your current site is aging. A major upgrade is expensive and disruptive. And the obvious alternatives don't match your ambitions."
     button_group:
@@ -59,7 +59,7 @@ scaffold:
         type: card
         enabled: true
         heading: 'Ambitions Beyond Content'
-        body: 'Membership management, online tools, partner portals—your next phase needs a platform that can grow with you.'
+        body: 'Membership management, online tools, partner portals, integrations that actually work—your next phase needs a platform that can grow with you. Most CMS platforms hit a hard ceiling here.'
         style: default
         accent: none
         full_width: false
@@ -68,78 +68,90 @@ scaffold:
         type: card
         enabled: true
         heading: 'Upgrade Sticker Shock'
-        body: "A major platform upgrade is a significant investment. Before you spend that kind of money, it's worth understanding exactly what you're buying and whether it solves the right problem."
+        body: "A major platform upgrade is a significant investment. Before you spend that kind of money, it's worth asking whether the upgraded version is actually the right platform for where you're going."
         style: default
         accent: none
         full_width: false
   -
     id: hX6rAiNuCsQw1gDbUkFp
-    type: text_section
+    type: card_grid
     enabled: true
-    heading: "I've Been Inside This Problem"
-    body: "Over 25 years I've watched organizations make expensive platform decisions they later regretted—including:"
-    items:
+    section_heading: 'The Third Option: Laravel + Statamic'
+    section_body: "There's a platform purpose-built for organizations whose ambitions have outgrown WordPress, but don't require the full weight of Drupal."
+    columns: '2'
+    cards:
       -
         id: iY7sBjOvDtRx2hEcVlGq
-        type: item
+        type: card
         enabled: true
-        text: 'A national organization that outgrew Drupal when it evolved into an enterprise platform they never needed'
+        heading: 'Built for Editors, Not Around Them'
+        body: "Statamic's control panel is clean, intuitive, and built around your content structure. Editors will actually use it—which means your site gets updated, and your organization stays in control."
       -
         id: jZ8tCkPwEuSy3iFdWmHr
-        type: item
+        type: card
         enabled: true
-        text: "A large franchise whose CMS couldn't grow with their ambitions, forcing them onto a second platform just to meet basic content needs"
+        heading: 'Built-In Features, Not Plugin Dependencies'
+        body: "Multilingual support, content versioning, flexible content modeling, user permissions—the functionality other platforms require plugins for ships with Statamic. No maintenance burden. No broken integrations when plugins don't play well together."
       -
         id: kA9uDlQxFvTz4jGeXnIs
-        type: item
+        type: card
         enabled: true
-        text: 'Organizations that chose WordPress for simplicity and eventually hit its ceiling at the worst possible time'
-  -
-    id: lB0vEmRyGwUa5kHfYoJt
-    type: text_section
-    enabled: true
-    heading: 'The Full Story'
-    body: |-
-      A decade ago I built a Drupal site for a national medical organization. It was the right choice at the time. Then Drupal evolved into an enterprise platform—more powerful, more complex, and more expensive to maintain. Organizations like theirs, who never needed that level of complexity, found themselves facing a difficult upgrade decision they didn't ask for.
-
-      I've also seen what happens when a large, multi-location service franchise pushes a content management system past its limits. The editors found it difficult to use and eventually the organization built workarounds on a separate platform just to get their content needs met. When it came time to integrate online booking, we hit a wall. A content management system, no matter how powerful, isn't an application framework. The integration work that should have taken weeks took years.
-
-      Both experiences pointed me toward the same conclusion. There's a class of organization that needs more than WordPress but doesn't need the full weight of an enterprise CMS—and they deserve a platform built for exactly where they are and where they're going.
+        heading: 'Built on Laravel: The Asset That Grows With You'
+        body: "Statamic sits on Laravel, one of the most widely adopted application frameworks in the world. That distinction matters. When your ambitions expand beyond content—membership tools, custom workflows, partner portals, API integrations—your platform doesn't force a rebuild. Laravel can grow into whatever your organization needs next."
+      -
+        id: lB0vEmRyGwUa5kHfYoJt
+        type: card
+        enabled: true
+        heading: 'Your Content Is Always Yours'
+        body: "Content stored in files, version-controlled alongside your code. No database breach risk. Automatic revision history. Content that's never locked inside a proprietary system."
   -
     id: mC1wFnSzHxVb6lIgZpKu
-    type: two_col
+    type: text_section
     enabled: true
-    left_heading: 'What I Bring'
-    left_body: "That's why I build on Laravel and Statamic. And it's why the work starts with understanding your organization—before a line of code is written."
-    right_style: emerald
-    right_items:
-      -
-        id: nD2xGoTaIyWc7mJhAqLv
-        type: item
-        enabled: true
-        text: '25 years of web development experience'
-      -
-        id: oE3yHpUbJzXd8nKiBrMw
-        type: item
-        enabled: true
-        text: 'Specialization in information architecture and system design'
+    heading: "Custom Functionality That's Now Economically Viable"
+    body: |
+      Organizations with specific needs have always deserved custom solutions. The problem was cost. A feature that saves your team ten hours a week could cost a developer a hundred hours to build.
+
+      AI-assisted development changes that equation. Not by replacing professional thinking, but by accelerating the execution. Repetitive scaffolding, boilerplate patterns, routine code—the parts that consumed significant developer time can now be generated quickly, leaving my attention where it matters: your specific architecture, edge cases, security, and actual requirements.
+  -
+    id: nD2xGoTaIyWc7mJhAqLv
+    type: callout
+    enabled: true
+    style: dark
+    heading: 'The result'
+    body: 'Custom functionality built around how your organization actually operates, on a platform you own, at a price point that finally makes sense. No recurring SaaS fees that scale with your growth. No vendor lock-in. No workarounds on a second platform.'
+  -
+    id: oE3yHpUbJzXd8nKiBrMw
+    type: card_grid
+    enabled: true
+    section_heading: 'How I Work'
+    section_body: "25 years building web systems teaches you what matters and what doesn't. My approach:"
+    columns: '3'
+    cards:
       -
         id: pF4zIqVcKaYe9oLjCsNx
-        type: item
+        type: card
         enabled: true
-        text: 'A small number of clients at a time'
+        heading: 'Architecture Before Code'
+        body: "We map out what we're building before we build it—how information flows, how content is structured, how the system behaves. That clarity prevents scope creep, expensive surprises, and decisions you regret later."
       -
         id: qG5aJrWdLbZf0pMkDtOy
-        type: item
+        type: card
         enabled: true
-        text: 'Consistent support from someone who knows your system deeply'
-    right_body: "I'm here for the project, and for where you're going next. When the build is finished you can count on me to provide help and guidance throughout the life of your website."
+        heading: 'Fixed Scope, Transparent Process'
+        body: 'Projects run on agreed specifications with a formal change order process. Budget burn is visible. Timelines are honest. You always know where things stand.'
+      -
+        id: rH6bKsXeMcAg1qNlEuPz
+        type: card
+        enabled: true
+        heading: 'One Developer Who Knows Your System'
+        body: 'Not a ticket queue. Not a new contact every engagement. I work with a small number of clients at a time. You get consistent support from someone invested in your site for the long term.'
   -
-    id: rH6bKsXeMcAg1qNlEuPz
+    id: sI7cLtYfNdBh2rOmFvQa
     type: cta_dark
     enabled: true
     heading: 'Facing a Major Website Decision?'
-    body: "A short conversation is usually enough to know whether this is the right fit—and if it's not, I'll point you in the right direction."
+    body: "A short conversation is usually enough to know whether this is the right fit—and what it would actually cost to get there."
     button_label: 'Book a Meeting'
     button_link: 'entry::b32ff7c7-bb6d-431d-aed3-d2f233b9b428'
     email_text: hello@douggough.com
